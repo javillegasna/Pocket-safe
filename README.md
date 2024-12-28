@@ -19,7 +19,7 @@
   
   ---
   ## DB Schema
-  [DB Schema](./docs/db.md)
+  [DB Schema](./.docs/db.md)
   ## Core Features
   
   ### 1. User Management
