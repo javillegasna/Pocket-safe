@@ -13,3 +13,4 @@ export const users = sqliteTable(
         t.uniqueIndex("email_idx").on(table.email)
     ]
   );
+
