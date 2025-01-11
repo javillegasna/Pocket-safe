@@ -6,7 +6,7 @@
       "@/*": [
         "./*"
       ],
-      "@adapters/*": ["./adapters/*"],
+      "@adapters/*": ["./src/adapters/*"],
     }
   },
   "include": [
