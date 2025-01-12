@@ -4,11 +4,16 @@ import { UserRepository } from "@/src/adapters/db/repositories/userRepo";
 import { View } from "@/src/ui/ThemedView";
 import { useTheme } from "@/src/hooks/useTheme";
 import { Card, Text } from "react-native-paper";
-import { Link } from "expo-router";
+import { Link, Redirect } from "expo-router";
 import { IconSymbol } from "@/src/ui/IconSymbol";
+import { useCurrentUser } from "@/src/hooks/useCurrentUser";
 
 export default function ProfileScreen() {
-  const { data } = useLiveQuery(UserRepository.findUserById(1));
+  const userId = useCurrentUser()
+  if (!userId) {
+    return <Redirect href="/auth/login" />;
+  }
+  const { data } = useLiveQuery(UserRepository.findUserById(userId));
   const theme = useTheme();
   if (!data) {
     return (
