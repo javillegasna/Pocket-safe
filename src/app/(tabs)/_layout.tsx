@@ -4,7 +4,6 @@ import { Platform } from 'react-native';
 
 import { useTheme } from '@/src/hooks/useTheme';
 import BlurTabBarBackground from '@/src/ui/TabBarBackground';
-import { HapticTab } from '@/app-example/components/HapticTab';
 import { IconSymbol } from '@/src/ui/IconSymbol';
 
 export default function TabLayout() {
@@ -14,7 +13,6 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: theme.colors.primary,
-        tabBarButton: HapticTab,
         tabBarBackground: BlurTabBarBackground,
         tabBarStyle: Platform.select({
           ios: {

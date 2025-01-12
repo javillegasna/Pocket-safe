@@ -27,7 +27,7 @@ export const transactionCategoriesRelations = relations(
   })
 );
 
-export const accountsRealtions = relations(accounts, ({ one }) => ({
+export const accountsRelations = relations(accounts, ({ one }) => ({
   accountCategories: one(accountCategories, {
     fields: [accounts.categoryId],
     references: [accountCategories.id],

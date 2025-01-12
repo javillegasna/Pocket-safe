@@ -8,7 +8,7 @@ export {
 export {
   userRelations,
   accountCategoriesRelations,
-  accountsRealtions,
+  accountsRelations,
   transactionRelations,
   transactionCategoriesRelations,
 } from "@/src/adapters/db/schema/relations";
