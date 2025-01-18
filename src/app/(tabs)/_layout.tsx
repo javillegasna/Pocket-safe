@@ -41,9 +41,9 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="accounts"
+        name="profile"
         options={{
-          title: 'Accounts',
+          title: 'Profile',
           headerStyle: {
             backgroundColor: theme.colors.elevation.level2,
             borderColor: theme.colors.border,

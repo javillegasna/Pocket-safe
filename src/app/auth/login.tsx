@@ -23,13 +23,9 @@ export default function SingUpPage() {
   });
   const theme = useTheme();
   const onSubmit = async (data: LoginSchema) => {
-    console.log(data);
-    
      const result = await UserRepository.validateUser(data.email, data.password)
-    
-    console.log(data);
+
     if (result?.id) {
-    console.log(result?.id);
       useCurrentUser(result?.id);
       router.push("/(tabs)");
     }

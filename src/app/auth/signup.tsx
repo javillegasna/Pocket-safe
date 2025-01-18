@@ -24,13 +24,9 @@ export default function SignUpPage() {
   });
   const theme = useTheme();
   const onSubmit = async (data: RegisterSchema) => {
-    console.log(data);
-    
      const result = await UserRepository.createUser(
         data
      )
-    
-    console.log(data);
     if (result) {
       useCurrentUser(result[0].id);
       router.push("/(tabs)");
